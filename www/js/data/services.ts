@@ -1,0 +1,30 @@
+     import { Lookup } from './../models/lookup';
+
+export var SERVICES: Lookup[] = [ 
+      // {"id":"1","description":"Chronic Diseases"},      
+      // {"id":"2","description":"Infectious Diseases"},      
+      // {"id":"3","description":"CPR Professional Learning"},      
+      // {"id":"4","description":"Field Trip Consultation"},      
+      // {"id":"5","description":"Health Office Supervision"},      
+      // {"id":"6","description":"Oral Health"},      
+      // {"id":"7","description":"Attendance"},      
+      // {"id":"8","description":"Behavior Planning"},      
+      // {"id":"9","description":"Bullying Prevention"},      
+      // {"id":"10","description":"Classroom Management"},      
+      // {"id":"11","description":"Crisis Planning"},      
+      // {"id":"12","description":"De-escalation Strategies"},      
+      // {"id":"13","description":"Discipline Support"},      
+      // {"id":"14","description":"Health Screenings"},      
+      // {"id":"15","description":"Homeless Student Support"},      
+      // {"id":"16","description":"Migrant Student Support"},      
+      // {"id":"17","description":"Mindfulness Practice"},      
+      // {"id":"18","description":"Multi-Tiered Systems of Support"},      
+      // {"id":"19","description":"Native Student Support"},      
+      // {"id":"20","description":"No Nonsense Nurturing"},      
+      // {"id":"21","description":"Other - Desired Support Is Not Listed"},      
+      // {"id":"22","description":"Restorative Practices"},      
+      // {"id":"23","description":"Signs of Suicide"},      
+      // {"id":"24","description":"Social Emotional Curriculum"},      
+      // {"id":"25","description":"Trauma-informed Eduation"},      
+      // {"id":"26","description":"Health Agenda Planning"}
+];

@@ -1,0 +1,22 @@
+<table class="table table-bordered table-striped table-hover" id="viewRequestsTable">
+    <thead>
+        <tr>
+            <th class="hidden-xs">Sent On</th>
+            <th class="hidden-xs">Requester</th>
+            <th >Requested School</th>
+            <th >Requested Service</th>
+            <th class="hidden-xs" >Status</th>
+            <th >Action</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: requestList">
+        <tr *ngFor="let request of requests">
+            <td class="hidden-xs" >{{request.serviceDate | date: 'MM/dd/yyyy'}}</td>
+            <td class="hidden-xs">{{request.name}}</td>
+            <td >{{request.school.description}}</td>
+            <td >{{request.service.description}}</td>
+            <td class="hidden-xs" >Status TBI</td>
+            <td><a class="btn btn-default"(click)="goToRequest(request._id)" >View</a></td>
+        </tr>
+    </tbody>
+</table>

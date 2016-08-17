@@ -1,0 +1,101 @@
+<div class="error" *ngIf="error">{{error}}</div>
+
+<div class="form-group col-sm-12" *ngIf="isEditMode">
+    <button id="btnSubmitRequest" class="btn btn-success pull-right" (click)="save()">Request Service</button>
+</div>
+<div class="form-group col-sm-12" *ngIf="!isEditMode">
+    <a id="btnReturnToList" class="btn btn-primary pull-right" (click)="goToRequests()">Return to Requests</a>
+</div>
+<div class="col-md-12" *ngIf="request">
+ <div class="panel" >
+            <div class="panel-heading"><h1 class="panel-title">Requester Information</h1></div>
+            <div class="panel-body" [class.dark]="isEditMode">
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label> Name </label>
+                        <div>
+                            <input name="RequesterName" class="form-control" type="text" [(ngModel)]="request.name" readonly/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label> School  </label>
+                        <div>
+                        <select class="form-control" required="" [disabled]="!isEditMode"[(ngModel)]="request.school._id" >
+                            <option *ngFor="let s of schools" [value]="s._id" >{{s.description}}</option>
+                        </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label> Role </label>
+                        <div>
+                         <select class="form-control" required="" [disabled]="!isEditMode" [(ngModel)]="request.role._id" >
+                            <option *ngFor="let r of roles" [value]="r._id" >{{r.description}}</option>
+                        </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label> Phone </label>
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-10">
+                            <input name="RequesterEmail" class="form-control" type="email" [(ngModel)]="request.phone" [disabled]="!isEditMode"  />
+                                <!-- <div class="phone-number">
+                                    <div class="col-xs-3">
+                                        <input id="phone1" type="tel" name="phone" class="form-control" data-bind="value: phone1, enable: isEditMode" size="3" maxlength="3" required="required">
+                                    </div>
+
+                                    <div class="col-xs-3">
+                                        <input id="phone2" type="tel" name="phone" class="form-control" data-bind="value: phone2, enable: isEditMode" size="3" maxlength="3" required="required">
+                                    </div>
+
+
+                                    <div class="col-xs-4">
+                                        <input id="phone3" type="tel" name="phone" class="form-control" data-bind="value: phone3, enable: isEditMode" size="4" maxlength="4" required="required">
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label> Email </label>
+                        <div>
+                            <input name="RequesterEmail" class="form-control" type="email" [(ngModel)]="request.email" readonly />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12" *ngIf="request">
+        <div class="panel">
+            <div class="panel-heading">
+                <h1 class="panel-title">Support Requested</h1>
+            </div>
+            <div class="panel-body" [class.dark]="isEditMode">
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label>Select Service Needed</label>
+                        <div>
+                        <select [(ngModel)]="request.service._id" class="form-control" required [disabled]="!isEditMode">
+                            <option *ngFor="let s of services" [value]="s._id" >{{s.description}}</option>
+                        </select>
+                        </div>
+                        <div class="form-group" style="padding-top:10px" *ngIf="request.service._id == '57ab7cd0d21380dd2037e99c'">
+                            <input name="OtherServiceDescription" [(ngModel)]="request.otherServiceDescription" class="form-control" placeholder="Describe support neeeded" required [disabled]="!isEditMode"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="">Date Support to be Delivered</label><br/>
+                        <div class="col-md-3 row col-xs-4">
+                            <div class="date" id="datePicker">
+                                <input type="text" class="form-control" name="ServiceDate" [disabled]="!isEditMode" [(ngModel)]="request.serviceDate" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,158 @@
+body  {
+	background-image:url("../Content/images/bg2012.jpg");
+	background-repeat:no-repeat;
+	background-position: top center;
+	background-color: #f8f8f0;
+    min-width: 630px;
+}
+h1, h2, h3, h4, h5  {
+	color: #016aab;
+}
+p  {
+	color: #858585;
+}
+img  {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+}
+#logo  {
+	margin-top: 10px;
+	margin-bottom: -40px;
+}
+
+/* -- Navbar override styles -- */
+
+.navbar-brand  {
+	display: inline-block;
+}
+
+.navbar-default {
+	background: #0a75b2;
+	border: none;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	color: #fff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+background-color: #fff;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+background-color: #056faa;
+}
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+	color: #e8e8e8;
+	background-color: #056faa;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+	color: #fff;
+	background-color: #056faa;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+color: #fff;
+background-color: transparent;
+}
+.navbar-default .navbar-nav>li>a {
+	color: #e8e8e8;
+}
+.container>.navbar-header, .container-fluid>.navbar-header, .container>.navbar-collapse, .container-fluid>.navbar-collapse {
+	color: #fff;
+}
+.navbar-header {
+	float: left;
+	color: #fff;
+}
+.navbar-default .navbar-brand {
+	color: #fff;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+	color: #fff;
+}
+.navbar  {
+	margin-bottom: 0px;
+}
+.dropdown-menu  {
+	background-color: #056faa;
+}
+.dropdown-menu>li>a  {
+	background-color: #056faa;
+	color: #e8e8e8;
+}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+	color: #262626;
+	text-decoration: none;
+	background-color: #0488d1 !important;
+}
+.careersButton  {
+	margin-top: 7px;
+}
+.rightColumn  {
+	background-color: #fff;
+	border-left: 5px solid #f8f8f0;
+}
+
+/* -- Footer -- */
+
+.footer  {
+	height: 155px;
+	padding-top: 20px;
+	background: url("../Content/images/footer_background.jpg") repeat-x;
+	text-align: center;
+}
+.footer a  {
+	color: #fff;
+}
+.footer p  {
+	color: #fff;
+}
+
+/* -- Take padding out of Bootstrap Navigation -- */
+
+.nopadding  {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+
+/* -- Title and alt title for phone size -- */
+
+#title  {
+	float: right;
+	font: 22px/1.6 Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	color: #fff;
+	margin: 0px 100px 15px 0;
+	padding-right: 5px;
+}
+#alt-title {
+	display: none;
+}
+
+/* -- To keep columns same height -- */
+
+.column-height  {
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+    background-color: #fff;
+}
+.row-eq-height {
+    overflow: hidden;
+}
+
+
+/* -- @media for phone size -- */
+
+@media (max-width: 525px) {
+	.logo { display: none; }
+	#title { display: none;}
+	#banner-img  { display: none; }
+	#alt-title  {
+		display: inline-block;
+		font: 22px/1.6 Helvetica, Arial, sans-serif;
+		font-weight: bold;
+		color: #000;
+		margin: 5px 0px 0px 0;
+}
+}
+
+
